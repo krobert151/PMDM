@@ -37,3 +37,16 @@ form>div:first-child>span {
 form>div:last-child>span {
     background-color: rgba(98, 58, 66, 1);
 }
+
+.form-control {
+    border: rgba(34, 52, 60, 1);
+    background-color: rgba(34, 52, 60, 1);
+}
+
+.icon {
+    border: solid rgba(34, 52, 60, 1);
+    border-radius: 12pt;
+    border-top-right-radius: 12;
+    border-bottom-right-radius: 12;
+    width: 40px;
+}
