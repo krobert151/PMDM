@@ -5,20 +5,20 @@ $(document).ready(() => {
     $('#encrypted').text('');
 
     function ci() {
-        var word = $('#descrypted').val().toUpperCase();
+        var letter = $('#descrypted').val().toUpperCase();
         var number = parseInt($('#number').val());
 
-        function cifrar(word, number) {
-            var arr = word.split('');
+        function cifrar(letter, number) {
+            var arr = letter.split('');
             var result = [];
             arr.forEach(a => {
                 if (abc.indexOf(a) !== -1) {
-                    var wordpos = abc.indexOf(a);
-                    wordpos += number;
-                    while (wordpos > abc.length) {
-                        wordpos -= abc.length;
+                    var letterpos = abc.indexOf(a);
+                    letterpos += number;
+                    while (letterpos > abc.length) {
+                        letterpos -= abc.length;
                     }
-                    result.push(abc[wordpos]);
+                    result.push(abc[letterpos]);
                 } else {
                     result.push(a);
                 }
@@ -26,17 +26,17 @@ $(document).ready(() => {
             return result.join('');
         }
 
-        function descrifrar(word, numer) {
-            var arr = word.split('');
+        function descrifrar(letter, numer) {
+            var arr = letter.split('');
             var result = [];
             arr.forEach(a => {
                 if (abc.indexOf(a) !== -1) {
-                    var wordpos = abc.indexOf(a);
-                    wordpos -= number;
-                    while (wordpos < 0) {
-                        wordpos += abc.length;
+                    var letterpos = abc.indexOf(a);
+                    letterpos -= number;
+                    while (letterpos < 0) {
+                        letterpos += abc.length;
                     }
-                    result.push(abc[wordpos]);
+                    result.push(abc[letterpos]);
                 } else {
                     result.push(a);
                 }
@@ -45,17 +45,20 @@ $(document).ready(() => {
         }
 
         if (reverse) {
-            $('#encrypted').text(descrifrar(word, number));
+            $('#encrypted').text(descrifrar(letter, number));
 
         } else {
-            $('#encrypted').text(cifrar(word, number));
+            $('#encrypted').text(cifrar(letter, number));
         }
 
     }
 
     $(document).on('input', ci);
 
+    $(document).on('textarea', ci);
+
     $(document).on('click', "#reverse", function () {
+
         reverse = !reverse;
         ci();
     });

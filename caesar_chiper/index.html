@@ -12,21 +12,33 @@
 </head>
 
 <body>
-    <button id="reverse">reverse</button>
-    <div>
-        <label for="descrypted" class="col-sm-2 col-form-label">Texto </label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="descrypted">
-        </div>
+    <div class="row">
+        <button id="reverse">reverse</button>
     </div>
-    <div>
-        <label for="number" class="col-sm-2 col-form-label">Numero</label>
-        <div class="col-sm-10">
-            <input type="number" class="form-control" id="number">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-5">
+            <label for="descrypted" class="col-sm-2 col-form-label">Texto </label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="descrypted" rows="10"></textarea>
+            </div>
         </div>
+        <div class="col-5 mt-5">
+            <div>
+                <p id="encrypted"></p>
+            </div>
+        </div>
+        <div class="col"></div>
     </div>
-    <div>
-        <p id="encrypted"></p>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-5">
+            <label for="number" class="col-sm-2 col-form-label">Numero</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="number">
+            </div>
+        </div>
+        <div class="col-6"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
