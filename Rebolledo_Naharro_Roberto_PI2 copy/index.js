@@ -1,5 +1,6 @@
 $(document).ready(() => {
 
+    $("li").append("\<p>A\</p>") ;
 
     var animales = ['https://www.nationalgeographic.com.es/medio/2021/10/26/vaca-de-la-raza-holstein_dc320ada_1280x1280.jpg',
                     'https://www.redaccionmedica.com/images/destacados/la-capacidad-de-la-oveja-para-reconocer-fotos-da-pistas-sobre-el-huntington-4697.jpg'
